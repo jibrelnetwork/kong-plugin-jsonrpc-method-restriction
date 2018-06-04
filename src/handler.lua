@@ -37,8 +37,7 @@ end
 function JsonrpcMethodRestrictionHandler:access(config)
     JsonrpcMethodRestrictionHandler.super.access(self)
 
-    local is_json = stringy.startswith(get_content_type(), APPLICATION_JSON)
-    if is_json then
+    if (get_content_type() and stringy.startswith(get_content_type(), APPLICATION_JSON)) then
         ngx.req.read_body()
         local body = ngx.req.get_body_data()
 
@@ -54,4 +53,3 @@ function JsonrpcMethodRestrictionHandler:access(config)
 end
 
 return JsonrpcMethodRestrictionHandler
-
