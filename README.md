@@ -25,7 +25,7 @@ You can also apply it for every API using the http://kong:8001/plugins/ endpoint
 | **config.allowed_methods**          |            | Comma-delimited list of the allowed JSONRPC method.     |
 
 
-**List of jsonrpc methods that uses by jWallet:***
+**List of jsonrpc methods that uses by jWallet**:
 
 eth_protocolVersion, eth_getBalance, eth_sendRawTransaction, eth_estimateGas, eth_gasPrice, eth_getTransactionCount,
 eth_blockNumber, eth_getBlockTransactionCountByHash, eth_getBlockTransactionCountByNumber, eth_getBlockByHash,
