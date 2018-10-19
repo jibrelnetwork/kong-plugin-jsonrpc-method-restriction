@@ -3,14 +3,11 @@ local cjson_safe = require "cjson.safe"
 
 local JsonrpcValidator = {}
 
-function is_empty(t)
-    for _, _ in pairs(t) do
-        return false
-    end
-    return true
+local function is_empty(t)
+    return next(t) == nil
 end
 
-function inTable(t, item)
+local function inTable(t, item)
     for key, value in pairs(t) do
         if value == item then
             return true
