@@ -5,7 +5,7 @@ describe("Jsonrpc Method Restriction Test Suite", function()
     local message
 
     setup(function()
-        jtp = require "kong.plugins.jsonrpc-method-restriction.jsonrpc_validator"
+        jtp = require "kong.plugins.kong-plugin-jsonrpc-method-restriction.jsonrpc_validator"
         status = nil
         message = nil
     end)
