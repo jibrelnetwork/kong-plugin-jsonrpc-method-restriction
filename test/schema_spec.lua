@@ -10,7 +10,6 @@ describe("JSONRPC Method Restriction schema", function()
 
         assert.truthy(valid)
         assert.falsy(err)
-        assert.is_true(type(config.allowed_methods) == 'table')
-        assert.is_true(next(config.allowed_methods) == nil)
+        assert.are.same(config.allowed_methods, {})
     end)
 end)
